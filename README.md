@@ -1,12 +1,15 @@
 # sepa-print
 S€PA Print ist ein Tool, welches Formulare von Avery Zweckform (Artikelnummer 2817) mit entsprechenden Inhalten bedruckt (S€PA Überweisungen).
 
+**English version not available, another project (Form Print) will be multi-language and contain these formulars, too.
+The Form Print project will also be aviable on GitHub and be linked here when it is available.**
+
+
 ## Download
 Betriebssystem | Version | Download | Voraussetzungen
 ---------------|---------|----------|----------------
-Windows 7/8/8.1/10 | 1.2 | [confu5ed.me](http://confu5ed.me/download/sepa-print/) | [Visual C++ Redistributable 2013 (x86)](https://www.microsoft.com/de-de/download/details.aspx?id=40784)
+Windows 7/8/8.1/10 | 1.2 (final) | [confu5ed.me](http://confu5ed.me/download/sepa-print/) | [Visual C++ Redistributable 2013 (x86)](https://www.microsoft.com/de-de/download/details.aspx?id=40784)
 
-**English version not available, another project (Form Print) will be multi-language and contain these formulars, too.**
 
 
 ## Lizenz
