@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/confu5ed.me.png</file>
+        <file>images/serious-pro.de.png</file>
+        <file>about.cpp</file>
+        <file>about.h</file>
+        <file>main.cpp</file>
+        <file>mainwindow.cpp</file>
+        <file>mainwindow.h</file>
+        <file>icons/sepaprint.png</file>
+    </qresource>
+</RCC>

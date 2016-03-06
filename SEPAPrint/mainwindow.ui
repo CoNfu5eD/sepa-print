@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>652</width>
+    <height>375</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>S€PA Print by CoNfu5eD.me</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/icons/sepaprint.png</normaloff>:/icons/sepaprint.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(53,53,53);
+color: white;
+
+QGroupBox {
+    border: 1px solid gray;
+    border-radius: 9px;
+    margin-top: 0.5em;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="btnOpen">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#btnOpen {
+background-color: transparent;
+color: white;
+font-weight: bold;
+border-style: solid;
+border-width:3px;
+border-color: white;
+padding: 5px;
+}
+QPushButton#btnOpen:hover {
+background-color: #00deff;
+border-color: #00deff;
+color: rgb(53,53,53);
+}</string>
+        </property>
+        <property name="text">
+         <string>Öffnen</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSave">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#btnSave {
+background-color: transparent;
+color: white;
+font-weight: bold;
+border-style: solid;
+border-width:3px;
+border-color: white;
+padding: 5px;
+}
+QPushButton#btnSave:hover {
+background-color: #00deff;
+border-color: #00deff;
+color: rgb(53,53,53);
+}</string>
+        </property>
+        <property name="text">
+         <string>Speichern</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSettings">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#btnSettings {
+background-color: transparent;
+color: white;
+font-weight: bold;
+border-style: solid;
+border-width:3px;
+border-color: white;
+padding: 5px;
+}
+QPushButton#btnSettings:hover {
+background-color: #00deff;
+border-color: #00deff;
+color: rgb(53,53,53);
+}</string>
+        </property>
+        <property name="text">
+         <string>Einstellungen</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAbout">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#btnAbout {
+background-color: transparent;
+color: white;
+font-weight: bold;
+border-style: solid;
+border-width:3px;
+border-color: white;
+padding: 5px;
+}
+QPushButton#btnAbout:hover {
+background-color: #00deff;
+border-color: #00deff;
+color: rgb(53,53,53);
+}</string>
+        </property>
+        <property name="text">
+         <string>Über S€PA Print</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+border: 0px solid black;
+padding-top: 15px;</string>
+      </property>
+      <property name="title">
+       <string>Begünstigter</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="beg">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(33,33,33);
+border-style: outset;
+border-width: 1px;
+border-color: rgba(255,255,255,0.25);
+color: rgba(255,255,255,0.64);
+padding-top: 0px;</string>
+         </property>
+         <property name="maxLength">
+          <number>35</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+border: 0px solid black;
+padding-top: 15px;</string>
+      </property>
+      <property name="title">
+       <string>IBAN</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="begIBAN">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(33,33,33);
+border-style: outset;
+border-width: 1px;
+border-color: rgba(255,255,255,0.25);
+color: rgba(255,255,255,0.64);
+padding-top: 0px;</string>
+         </property>
+         <property name="inputMask">
+          <string>AA00 0000 0000 0000 0000 0000 0000 0000 00</string>
+         </property>
+         <property name="maxLength">
+          <number>42</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+border: 0px solid black;
+padding-top: 15px;</string>
+        </property>
+        <property name="title">
+         <string>BIC</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="leftMargin">
+          <number>1</number>
+         </property>
+         <property name="topMargin">
+          <number>1</number>
+         </property>
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <property name="bottomMargin">
+          <number>1</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="begBIC">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(33,33,33);
+border-style: outset;
+border-width: 1px;
+border-color: rgba(255,255,255,0.25);
+color: rgba(255,255,255,0.64);
+padding-top: 0px;</string>
+           </property>
+           <property name="maxLength">
+            <number>11</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+border: 0px solid black;
+padding-top: 15px;</string>
+        </property>
+        <property name="title">
+         <string>Betrag</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="leftMargin">
+          <number>1</number>
+         </property>
+         <property name="topMargin">
+          <number>1</number>
+         </property>
+         <property name="rightMargin">
+          <number>1</number>
+         </property>
+         <property name="bottomMargin">
+          <number>1</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="betrag">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(33,33,33);
+border-style: outset;
+border-width: 1px;
+border-color: rgba(255,255,255,0.25);
+color: rgba(255,255,255,0.64);
+padding-top: 0px;</string>
+           </property>
+           <property name="maxLength">
+            <number>12</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+border: 0px solid black;
+padding-top: 15px;</string>
+      </property>
+      <property name="title">
+       <string>Kunden-Referenznummer - Verwendungszweck</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="verwendungszweck">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(33,33,33);
+border-style: outset;
+border-width: 1px;
+border-color: rgba(255,255,255,0.25);
+color: rgba(255,255,255,0.64);
+padding-top: 0px;</string>
+         </property>
+         <property name="maxLength">
+          <number>27</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+border: 0px solid black;
+padding-top: 15px;</string>
+      </property>
+      <property name="title">
+       <string>noch Verwendungszweck</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="nochVerwendungszweck">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(33,33,33);
+border-style: outset;
+border-width: 1px;
+border-color: rgba(255,255,255,0.25);
+color: rgba(255,255,255,0.64);
+padding-top: 0px;</string>
+         </property>
+         <property name="maxLength">
+          <number>35</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+border: 0px solid black;
+padding-top: 15px;</string>
+      </property>
+      <property name="title">
+       <string>Kontoinhaber</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="inhaber">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(33,33,33);
+border-style: outset;
+border-width: 1px;
+border-color: rgba(255,255,255,0.25);
+color: rgba(255,255,255,0.64);
+padding-top: 0px;</string>
+         </property>
+         <property name="maxLength">
+          <number>27</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_8">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+border: 0px solid black;
+padding-top: 15px;</string>
+      </property>
+      <property name="title">
+       <string>IBAN</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>1</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="inhaberIBAN">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(33,33,33);
+border-style: outset;
+border-width: 1px;
+border-color: rgba(255,255,255,0.25);
+color: rgba(255,255,255,0.64);
+padding-top: 0px;</string>
+         </property>
+         <property name="inputMask">
+          <string>\D\E00 0000 0000 0000 0000 00</string>
+         </property>
+         <property name="text">
+          <string>DE     </string>
+         </property>
+         <property name="maxLength">
+          <number>27</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnPrint">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btnPrint {
+background-color: transparent;
+color: white;
+font-weight: bold;
+border-style: solid;
+border-width:3px;
+border-color: white;
+padding: 5px;
+}
+QPushButton#btnPrint:hover {
+background-color: #00deff;
+border-color: #00deff;
+color: rgb(53,53,53);
+}</string>
+      </property>
+      <property name="text">
+       <string>DRUCKEN</string>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
