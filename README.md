@@ -2,7 +2,7 @@
 S€PA Print ist ein Tool, welches Formulare von Avery Zweckform (Artikelnummer 2817) mit entsprechenden Inhalten bedruckt (S€PA Überweisungen).
 
 **English version not available, another project (Form Print) will be multi-language and contain these formulars, too.
-The Form Print project will also be aviable on GitHub and be linked here when it is available.**
+The Form Print project will also be available on GitHub and be linked here when it is available.**
 
 
 ## Download
